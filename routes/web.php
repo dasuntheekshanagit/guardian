@@ -29,3 +29,7 @@ Route::get('/signout', [SignInController::class, 'signout'])->name('signin.signo
 
 Route::get('/details', [UserdetailsController::class, 'index'])->name('signup.userdetails');
 Route::post('/details', [UserdetailsController::class, 'store'])->name('signup.details');
+
+Route::get('/add', function () {
+    return view('preceptcard');
+})->name('preceptcard');
