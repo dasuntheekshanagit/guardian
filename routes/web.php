@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PrescriptionController;
 use App\Http\Controllers\SignUpController;
 use App\Http\Controllers\SignInController;
 use App\Http\Controllers\UserdetailsController;
@@ -30,6 +31,5 @@ Route::get('/signout', [SignInController::class, 'signout'])->name('signin.signo
 Route::get('/details', [UserdetailsController::class, 'index'])->name('signup.userdetails');
 Route::post('/details', [UserdetailsController::class, 'store'])->name('signup.details');
 
-Route::get('/add', function () {
-    return view('preceptcard');
-})->name('preceptcard');
+Route::get('/add', [PrescriptionController::class, 'index'])->name('preceptcard');
+Route::post('/add', [PrescriptionController::class, 'store'])->name('preceptcard.store');
