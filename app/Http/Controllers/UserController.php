@@ -17,7 +17,7 @@ class UserController extends Controller
                 return view('dashboard', ['prescriptions' => $prescriptions]);
             }
         } else {
-            return route('signin.index');
+            return redirect()->route('signin.index');
         }
     }
 }

@@ -21,4 +21,8 @@ class Prescription extends Model
         'user',
         'status'
     ];
+
+    public function drugs(){
+        return $this->belongsToMany(Drugs::class, 'prescription_drugs', 'prescription_id', 'drug_id');
+    }
 }

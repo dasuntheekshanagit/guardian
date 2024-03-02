@@ -5,6 +5,7 @@ use App\Http\Controllers\SignUpController;
 use App\Http\Controllers\SignInController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserdetailsController;
+use App\Http\Controllers\DrugController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,3 +33,11 @@ Route::post('/details', [UserdetailsController::class, 'store'])->name('signup.d
 
 Route::get('/add', [PrescriptionController::class, 'index'])->name('preceptcard');
 Route::post('/add', [PrescriptionController::class, 'store'])->name('preceptcard.store');
+Route::get('/prescription/{id}', [PrescriptionController::class, 'show'])->name('prescription.show');
+Route::post('/prescription/{id}/quotations', [PrescriptionController::class, 'quatation'])->name('prescription.quatation');
+Route::get('/prescriptions/{id}/quotations', [PrescriptionController::class, 'getQuotationDetails']);
+Route::post('/prescriptions/{id}/accept', [PrescriptionController::class, 'acceptQuotation'])->name('acceptQuotation');
+
+Route::get('/drugs', [DrugController::class, 'index']);
+Route::post('/drugs', [DrugController::class, 'store']);
+Route::delete('/drugs/{id}', [DrugController::class, 'destroy']);

@@ -67,7 +67,7 @@
                     </form>
                     <div class="row" id="account">
                       <div class="col-12">
-                        <p class="mb-0 mt-5 text-secondary text-center">Don't have an account? <a href="#!" class="link-primary text-decoration-none">Sign Up</a></p>
+                        <p class="mb-0 mt-5 text-secondary text-center">Don't have an account? <a href={{ route('signup.index') }} class="link-primary text-decoration-none">Sign Up</a></p>
                       </div>
                     </div>
                   </div>

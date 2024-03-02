@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="col-md-6 col-lg-2 my-3 d-flex justify-content-center align-items-center">
                                     <button type="button" class="btn btn-lg btn-block btn-success btn-custom mx-2" id="contact-submit">
-                                        + New
+                                       <a href="/drugs" style="text-decoration: none; color: inherit;"> Price List</a>
                                     </button>
                                 </div>
                             </div>
@@ -65,10 +65,10 @@
                                 $text = '';
                                 if ($prescription->status === 'pending') {
                                     $bgClass = 'bg-warning';
-                                    $text = 'Pending..';
+                                    $text = 'Add Quotation';
                                 } elseif ($prescription->status === 'accept') {
                                     $bgClass = 'bg-success';
-                                    $text = 'Accept';
+                                    $text = 'Accepted';
                                 } elseif ($prescription->status === 'agree') {
                                     $bgClass = 'bg-danger';
                                     $text = 'Remove';
@@ -99,7 +99,7 @@
                                         </div>
                                     </div>
                                     <div class="job-right my-4 flex-shrink-0" >
-                                        <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light">{{ $text }}</a>
+                                        <a href="{{ route('prescription.show', ['id' => $prescription->id]) }}"  class="btn d-block w-100 d-sm-inline-block btn-light">{{ $text }}</a>
                                     </div>
                                 </div>
                             @endforeach

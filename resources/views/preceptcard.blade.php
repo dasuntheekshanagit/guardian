@@ -124,6 +124,9 @@
                 i.className = 'zmdi zmdi-close-circle-o';
                 a2.appendChild(i);
                 a2.onclick = function() {
+                    var index = Array.from(preview.children).indexOf(this.parentElement.parentElement);
+                    accumulatedFiles.items.remove(index);
+                    document.getElementById('images').files = accumulatedFiles.files;
                     this.parentElement.parentElement.remove();
                 }
 

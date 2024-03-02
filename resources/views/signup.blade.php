@@ -95,7 +95,7 @@
                     </form>
                     <div class="row" id="account">
                       <div class="col-12">
-                        <p class="mb-0 mt-5 text-secondary text-center">Already have an account? <a href="#!" class="link-primary text-decoration-none">Sign in</a></p>
+                        <p class="mb-0 mt-5 text-secondary text-center">Already have an account? <a href={{ route('signin.index') }} class="link-primary text-decoration-none">Sign in</a></p>
                       </div>
                     </div>
                   </div>
