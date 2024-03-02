@@ -3,6 +3,7 @@
 use App\Http\Controllers\PrescriptionController;
 use App\Http\Controllers\SignUpController;
 use App\Http\Controllers\SignInController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserdetailsController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,9 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('/', [UserController::class, 'index'])->name('dashboard');
 
 Route::get('/signup', [SignUpController::class, 'index'])->name('signup.index');
 Route::post('/signup', [SignUpController::class, 'register'])->name('signup.create');

@@ -38,7 +38,7 @@
             <div class="form-row">
                 <div class="form-holder w-100">
                     <input type="text" class="form-control" placeholder="Title" name="title">
-                    <i class="zmdi zmdi-phone"></i>
+                    <i class="zmdi zmdi-hospital"></i>
                 </div>
             </div>
             <div class="form-row">
